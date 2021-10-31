@@ -14,11 +14,6 @@ import {
 } from "./components/firebase/firebase.utility";
 import { setCurrentUser } from "./redux/user/user.actions";
 import CheckoutPage from "./pages/checkout/checkout.component";
-const HatsPage = () => (
-    <div>
-        <h1>HATS PAGE </h1>
-    </div>
-);
 
 class App extends React.Component {
     unsubscribeFromAuth = null;
@@ -49,8 +44,8 @@ class App extends React.Component {
                 <Header />
                 <Switch>
                     <Route exact path="/" component={Homepage} />
-                    <Route path="/shop/hats" component={HatsPage} />
-                    <Route exact path="/shop" component={ShopPage} />
+                    {/* <Route path="/shop/hats" component={HatsPage} /> */}
+                    <Route path="/shop" component={ShopPage} />
                     <Route exact path="/checkout" component={CheckoutPage} />
                     <Route
                         exact
